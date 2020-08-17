@@ -1,0 +1,337 @@
+/*
+ Localizable.strings
+ BaylanMgn
+ 
+ Created by musa fedakar on 10.08.2018.
+ Copyright © 2018 musa fedakar. All rights reserved.
+ */
+"Not Available" = "Not Available";
+"Back" = "Back";
+"Company" = "Company";
+"Help" = "Help";
+"Other" = "Other";
+"Others" = "Others";
+"Home" = "Home";
+"Work" = "Work";
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Connection Error. App parameters cannot be retrieved" = "Connection Error. App parameters cannot be retrieved";
+"App parameters has been updated succesfully" = "App parameters has been updated succesfully";
+"Data Error. App parameters cannot be updated" = "Data Error. App parameters cannot be retrieved";
+"System maintenance is on the run. App will be available shortly after" = "System maintenance is on the run. App will be available shortly after";
+"Welcome" = "Welcome";
+"Retrieving your account" = "Retrieving your account";
+"Company Register" = "Company Register";
+"Company Info" = "Company Info";
+"Company Title" = "Company Title";
+"Store Name eg: Monks Cafe" = "Store Name eg: Monks Cafe";
+"Tax Number" = "Tax Number";
+"Tax Office" = "Tax Office";
+"Validation Code" = "Validation Code";
+"Web Url" = "Web Url";
+"Retail Field" = "Retail Field";
+"Store Activity Info" = "Store Activity Info";
+"Additional Notes" = "Additional Notes";
+"You can add here your notes to your customers or any additional information about your business" = "You can add here your notes to your customers or any additional information about your business";
+"Legal Information" = "Legal Information";
+"Profile Photo" = "Profile Photo";
+"Barcode Reader" = "Barcode Reader";
+"Settings" = "Settings";
+"Location Information" = "Location Information";
+"Store Content Details" = "Store Content Details";
+"County" = "County";
+"Country" = "Country";
+"City" = "City";
+"Neighborhood" = "Neighborhood";
+"Address details. You can add your own details, directions or guidance.." = "Address details. You can add your own details, directions or guidance..";
+"Payment Type" = "Payment Type";
+"Store Service Locations" = "Store Service Locations";
+"Minimum Cart Amount" = "Minimum Cart Amount";
+"You should pick your store location before assign service nodes" = "You should pick your store location before assign service nodes";
+"Service location must be within administrative area of your store" = "Service location must be within administrative area of your store";
+"All Neighborhoods" = "All Neighborhoods";
+"Phone Number" = "Phone Number";
+"Delivery Number" = "Delivery Number";
+"Phone number is required" = "Phone number is required";
+"Location info is required" = "Location info is required";
+"Tax Number is required" = "Tax Number is required";
+"Tax Office is required" = "Tax Office is required";
+"Company Name is required" = "Company Name is required";
+"Login" = "Login";
+"Upload Failed" = "Upload Failed";
+"At least one store content must be selected to proceed" = "At least one store content must be selected to proceed";
+"At least one payment type must be selected to proceed" = "At least one payment type must be selected to proceed";
+"County cannot be empty. Cancelled.." = "County cannot be empty. Cancelled..";
+"My Preferences" = "Preferences";
+"My Notifications" = "Notifications";
+"My Orders History" = "My Orders History";
+"About" = "About";
+"Your Current Location" = "Your current location";
+"You should select at least one service region" = "You should select at least one service region";
+"Password" = "Password";
+"Password Again" = "Password Again";
+"Sign In" = "Sign In";
+"Already have an account?" = "Already have an account?";
+"Sign Up" = "Sign Up";
+"Don't have an account?" = "Don't have an account?";
+"Register" = "Register";
+"SMS not delivered?" = "SMS not delivered?";
+"Send Again" = "Send Again";
+"Validate" = "Validate";
+"Password is required" = "Password is required";
+"Passwords do not match. Please check" = "Passwords do not match. Please check";
+"Please enter the code that we sent to your phone" = "Please enter the code that we sent to your phone";
+"Unknown user or wrong password" = "Unknown user or wrong password";
+"Invalid verification code" = "Invalid verification code";
+"Logout" = "Logout";
+"You are about to logoff. Are you sure?" = "You are about to logoff. Are you sure?";
+"Yes" = "Yes";
+"Store Title" = "Store Title";
+"Invalid email address" = "Invalid email address";
+"Forgot Password" = "Forgot Password";
+"Your password has been sent to you via sms" = "Your password has been sent to you via sms";
+"Please enter the code that we sent to your email" = "Please enter the code that we sent to your email";
+"Save & Send Code" = "Save & Send Code";
+"Your sms with confirmation code is on its way" = "Your sms with confirmation code is on its way";
+"Complete Profile" = "Complete Register";
+"Create an Address" = "Create an Address";
+"Address Information" = "Address Information";
+"Address Type" = "Address Type";
+"Add your address" = "Add your address";
+"City name cannot be empty" = "City name cannot be empty";
+"County name cannot be empty" = "County name cannot be empty";
+"Address details cannot be empty" = "Address details cannot be empty";
+"My Profile" = "Profile";
+"My Orders" = "Orders";
+"Main Page" = "Main Page";
+"My Messages" = "Messages";
+"Favorites" = "Favorites";
+"Add" = "Add";
+"Done" = "Done";
+"Contact Us" = "Contact Us";
+/* Item Attribute (sub category) Values Enters */
+"Milk" = "Milk";
+"Cheese" = "Cheese";
+"Yogurt" = "Yogurt";
+"Butter" = "Butter";
+"Egg" = "Egg";
+"Corn Flakes" = "Corn Flakes";
+"Macaroni" = "Macaroni";
+"Bulgur" = "Bulgur";
+"Rice" = "Rice";
+"Flour" = "Flour";
+"Liquid oil" = "Liquid oil";
+"Salt" = "Salt";
+"Spice" = "Spice";
+"Soup" = "Soup";
+"Tomato paste" = "Tomato paste";
+"Ketchup" = "Ketchup";
+"Mayonnaise" = "Mayonnaise";
+"Candy" = "Candy";
+"Chocolate" = "Chocolate";
+"Biscuit" = "Biscuit";
+"Cookies" = "Cookies";
+"CIPS" = "CIPS";
+"Bread" = "Bread";
+"Ice Cream" = "Ice Cream";
+"Carbonated beverage" = "Carbonated beverage";
+"Beverage" = "Beverage";
+"Tea" = "Tea";
+"Coffee" = "Coffee";
+"Buttermilk" = "Buttermilk";
+"Mineral water" = "Mineral water";
+"Water" = "Water";
+"Paper" = "Paper";
+"Kitchen" = "Kitchen";
+"Detergent" = "Detergent";
+"Plasticizer" = "Plasticizer";
+"Surface" = "Surface";
+/* Item Attribute (sub category) Values Quits */
+"Product Name" = "Product Name";
+"Product Info" = "Product Info";
+"Unit" = "Unit";
+"Price" = "Price";
+"In Stock" = "In Stock";
+"Store" = "Store";
+"Retail field, service contents and delivery times of your store" = "Retail field, service contents and delivery times of your store..";
+"Legal information, validations and its location of your company" = "Legal information, validations and its location of your company";
+"Delivery nodes and minimum cart amounts of your store" = "Delivery nodes and minimum cart amounts of your store";
+"Delivery" = "Delivery";
+"Delivery Employees (Soon)" = "Delivery Employees (Soon)";
+"Add registered users to your company" = "Add registered users to your company";
+"Personal Info" = "Personal Info";
+"Personal Details of your account. Social media link (Soon)" = "Personal Details of your account. Social media link (Soon)";
+"Email Confirmed" = "Email Confirmed";
+"First Name" = "First Name";
+"Last Name" = "Last Name";
+"Phone Number Confirmed" = "Phone Number Confirmed";
+"First name field is required" = "First name field is required";
+"Last name field is required" = "Last name field is required";
+"Delivery Hours - Weekdays" = "Delivery Hours - Weekdays";
+"Delivery Hours - Weekends" = "Delivery Hours - Weekends";
+"Delivery Hours - Sunday & Holidays" = "Delivery Hours - Sunday & Holidays";
+"Delivery available for giving date" = "Delivery available for giving date";
+"Start Date" = "Start Date";
+"End Date" = "End Date";
+"Start Hour" = "Start Hour";
+"End Hour" = "End Hour";
+"Pick a date" = "Pick a date";
+"County cannot be assigned automatically. Please select from the list" = "County cannot be assigned automatically. Please select from the list";
+"Select" = "Please Select";
+"Your Last Name" = "Your Last Name";
+"Your First Name" = "Your First Name";
+"Success" = "Success";
+"Food" = "Food";
+"Cleaning" = "Cleaning";
+"Breakfast" = "Breakfast";
+"Beverages" = "Beverages";
+"Vegetables" = "Vegetables";
+"Fruit" = "Fruit";
+"Organic" = "Organic";
+"Plastic" = "Plastic";
+"Glass" = "Glass";
+"Hair Cut" = "Hair Cut";
+"Finger" = "Finger";
+"Hair Care" = "Hair Care";
+"Skin Care" = "Skin Care";
+"Vaccination" = "Vaccination";
+"Alçı" = "Alçı";
+"Vegetables" = "Vegetables";
+"Enlarge" = "Enlarge";
+"Minimize" = "Minimize";
+"Vegetable Oil" = "Vegetable Oil";
+/* Product Front  Enters */
+"This product/service is not available at the moment" = "This product/service is not available at the moment";
+"Available" = "Available";
+/* Product Front Quits */
+
+/* Retail Field Enters */
+"Supermarket" = "Supermarket";
+"Greengrocery" = "Greengrocery";
+"Water" = "Water";
+"Coiffeur (Woman)" = "Coiffeur (Woman)";
+"Pharmacy" = "Pharmacy";
+"Dry Cleaning" = "Dry Cleaning";
+"Ironing" = "Ironing";
+"Butcher" = "Butcher";
+"Cab Service" = "Cab Service";
+"Electricity" = "Electricity";
+"Car Wash" = "Car Wash";
+"Barber" = "Barber";
+"Tailor" = "Tailor";
+"Plumber" = "Plumber";
+"Veterinary" = "Veterinary";
+"Rent a Car" = "Rent a Car";
+"Locksmith" = "Locksmith";
+"Charcuterie" = "Charcuterie";
+"Fish Market" = "Fish Market";
+"Fitness Center" = "Fitness Center";
+"Dental Center" = "Dental Center";
+"Cake Shop" = "Cake Shop";
+"Attorney At Law" = "Attorney At Law";
+/* Retail Field Quits */
+
+
+/* Order - cart Enters */
+"Store cannot be null" = "Store cannot be null";
+"Order Details" = "Appointment / Order Details";
+"Appointment Date" = "Appointment Date";
+"Add Service to Order" = "Add Service to Appointment";
+"Requested Services" = "Requested Services";
+"Adding service to your appointment is for information only. You may be charged differently at the store" = "Adding service to your appointment is for information only. You may be charged differently at the store.";
+"Additional Notes" = "Additional Notes";
+"Request Service Order" = "Request Service Order";
+"Dated" = "Dated";
+"Plan date cannot be null for service orders" = "Plan date cannot be null for service orders";
+"Order" = "Order";
+"Go Back to Home Screen" = "Go Back to Home Screen";
+"Customer" = "Customer";
+"Add New Item To Cart" = "Add New Item To Cart";
+"Edit" = "Edit";
+"Remove" = "Remove";
+"Summary" = "Summary";
+"Selected" = "Selected";
+"Item" = "Item";
+"Add From List" = "From List";
+"Add Manually" = "Manually";
+"Edit Order" = "Edit Order";
+"Send Message" = "Send Message";
+"Show on map" = "Show on Map";
+
+"Accept Order" = "Accept Order";
+"Cancel Order" = "Cancel Order";
+"Complete Order" = "Complete Order";
+"Order cancelled" = "Order cancelled";
+"Your order is dispatched. Delivery shortly" = "Your order is dispatched. Delivery shortly";
+"You are about to cancel this order. Are you sure?" = "You are about to cancel this order. Are you sure?";
+"You are about to confirm this order. Are you sure?" = "You are about to confirm this order. Are you sure?";
+"Order Dispatched. See you next time :)" = "Order dispatched. See you next time :)";
+"Dialer app cannot be found" = "Dialer app cannot be found";
+"Updated" = "Updated";
+"Open" = "Open";
+"Dispatched" = "Dispatched";
+"Cancelled" = "Cancelled";
+"En Route" = "En Route";
+
+"Rate Your Order" = "Rate Order";
+"Your comments:" = "Your comments:";
+"Your comments will be published after a confirmation process. We reserve the rights to not publish offensive, illegal comments." = "Your comments will be published after a confirmation process. We reserve the rights to not publish offensive, illegal comments.";
+
+"Please rate your order" = "Please rate your order to continue";
+/* Order - caart Quits */
+
+
+/* Retail field stores enters */
+"Call" = "Call";
+"Message" = "Message";
+"Min. Amount" = "Min. Amount";
+"Store notes cannot be found" = "Store notes cannot be found";
+"Comments" = "Comments";
+"Special for you" = "Special for you";
+"long_distance" = " long..";
+"? different retail field on service" = "? different retail field on service";
+"On 24h Duty" = "On 24h Duty";
+"Me" = "Me";
+"My Current Address" = "My Current Address";
+/* Retail field stores quits */
+
+/*Chat screen strings enters */
+"Server connection lost please wait while recovering" = "Server connection lost please wait while recovering";
+/*Chat screen strings quits */
+
+/* Profile Screen enters */
+"Help and Support" = "Help and Support";
+"Application Settings" = "Application Settings";
+"My Orders" = "My Orders";
+"My Addresses" = "My Addresses";
+"My Debit Cards" = "My Debit Cards";
+"My Personal Informations" = "Personal Info";
+"My Past Orders" = "My Past Orders";
+/* Profile screen quits */
+
+/* favorites screen enters */
+"My Favorites" = "Favorites";
+/* favorites screen quits */
+
+/* settings screen enters */
+"Offline Mode" = "Offline Mode";
+"When you are offline users cannot send new orders by the app. But your store will still be listed and available for phone calls. Please fill out below form to leave the app completely" = "When you are offline users cannot send new orders by the app. But your store will still be listed and available for phone calls. Please fill out below form to leave the app completely";
+"Notifications Settings" = "Notifications Settings";
+"Privacy Settings" = "Privacy Settings";
+"Order Notifications" = "Order Notifications";
+"Views Notifications" = "Views Notifications";
+"Promotion Notifications" = "Order Notifications";
+"Hide My Name" = "Hide My Name";
+"Hide My Online Status" = "Hide My Online Status";
+"Remove Store" = "Remove Store";
+"Remove Store from the app" = "Remove Store from the app";
+"Please type a your request and your reason (if any) to leave the app. We will review your request and remove your account permanently" = "Please type a your request and your reason (if any) to leave the app. We will review your request and remove your account permanently";
+"Enable Advanced Mode" = "Enable Advanced Mode";
+"Advanced Store Management" = "Advanced Store Management";
+"Advanced Store Management allows you to manage and to monitor multiple stores in your single company from different (or same) retail fields." = "Advanced Store Management allows you to manage and to monitor multiple stores in your single company from different (or same) retail fields.";
+/* settings screen quits */
+
+"Last Update:" = "Last Update:";
+"Search repos.." = "Search repos..";
+"records remaining.." = "records remaining..";
+
