@@ -71,6 +71,9 @@
 		107573B724EAD79200E1A22C /* RepoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107573B524EAD79200E1A22C /* RepoViewCell.xib */; };
 		107573BB24EB277E00E1A22C /* PagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107573B924EB277E00E1A22C /* PagerViewCell.swift */; };
 		107573BC24EB277E00E1A22C /* PagerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107573BA24EB277E00E1A22C /* PagerViewCell.xib */; };
+		107573BF24EBA75200E1A22C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107573BE24EBA75200E1A22C /* ProfileViewController.swift */; };
+		107573C224EBAB0100E1A22C /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107573C024EBAB0100E1A22C /* ProfileViewCell.swift */; };
+		107573C324EBAB0100E1A22C /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107573C124EBAB0100E1A22C /* ProfileViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +164,9 @@
 		107573B524EAD79200E1A22C /* RepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewCell.xib; sourceTree = "<group>"; };
 		107573B924EB277E00E1A22C /* PagerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewCell.swift; sourceTree = "<group>"; };
 		107573BA24EB277E00E1A22C /* PagerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagerViewCell.xib; sourceTree = "<group>"; };
+		107573BE24EBA75200E1A22C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		107573C024EBAB0100E1A22C /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		107573C124EBAB0100E1A22C /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -374,6 +380,7 @@
 		1075738A24EAC00600E1A22C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				107573BD24EBA71300E1A22C /* Profile */,
 				107573B824EAD79C00E1A22C /* RepoView */,
 				102C2F7224EA80C600058B10 /* Main.storyboard */,
 			);
@@ -438,6 +445,16 @@
 				107573BA24EB277E00E1A22C /* PagerViewCell.xib */,
 			);
 			path = RepoView;
+			sourceTree = "<group>";
+		};
+		107573BD24EBA71300E1A22C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				107573BE24EBA75200E1A22C /* ProfileViewController.swift */,
+				107573C024EBAB0100E1A22C /* ProfileViewCell.swift */,
+				107573C124EBAB0100E1A22C /* ProfileViewCell.xib */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,6 +575,7 @@
 				102C2FF224EA84E100058B10 /* Localizable.strings in Resources */,
 				107573B724EAD79200E1A22C /* RepoViewCell.xib in Resources */,
 				107573BC24EB277E00E1A22C /* PagerViewCell.xib in Resources */,
+				107573C324EBAB0100E1A22C /* ProfileViewCell.xib in Resources */,
 				102C302324EA84E100058B10 /* Comfortaa-Bold.ttf in Resources */,
 				102C2F7624EA80C800058B10 /* Assets.xcassets in Resources */,
 				102C302424EA84E100058B10 /* Comfortaa-Light.ttf in Resources */,
@@ -611,6 +629,7 @@
 				102C306A24EAA60800058B10 /* DoubleExtensions.swift in Sources */,
 				102C309124EAA60800058B10 /* JsonExtensions.swift in Sources */,
 				107573AE24EAD23100E1A22C /* ActivityIndicatorProgressorView.swift in Sources */,
+				107573BF24EBA75200E1A22C /* ProfileViewController.swift in Sources */,
 				107573B624EAD79200E1A22C /* RepoViewCell.swift in Sources */,
 				107573AC24EAD23100E1A22C /* DismissableProgressorView.swift in Sources */,
 				102C302124EA84E100058B10 /* RepoResponse.swift in Sources */,
@@ -622,6 +641,7 @@
 				102C309624EAA78D00058B10 /* SwiftyJSON.swift in Sources */,
 				102C308D24EAA60800058B10 /* UITableViewExtensions.swift in Sources */,
 				102C308F24EAA60800058B10 /* UIViewControllerExtensions.swift in Sources */,
+				107573C224EBAB0100E1A22C /* ProfileViewCell.swift in Sources */,
 				107573AD24EAD23100E1A22C /* BlurProgressorView.swift in Sources */,
 				102C306724EAA60800058B10 /* ApplicationExtensions.swift in Sources */,
 				107573A424EAD23100E1A22C /* ProgressorView.swift in Sources */,

@@ -418,3 +418,7 @@
 "Last Update:" = "Son Güncelleme:";
 "Search repos.." = "Repoları Ara..";
 "records remaining.." = "kayıt daha..";
+
+"public repos" = "açık proje";
+"followers" = "takipçi";
+"bio not available" = "özgeçmiş bilgisi bulunamadı";

@@ -357,4 +357,8 @@ class MyStrings {
     lazy var LAST_UPDATE_WITH_COLON : String = "Last Update:".localized
     lazy var SEARCH_REPOSITORIES : String = "Search repos..".localized
     lazy var RECORDS_REMAINING : String = "records remaining..".localized
+    
+    lazy var PUBLIC_REPOS: String = "public repos".localized
+    lazy var FOLLOWERS : String = "followers".localized
+    lazy var BIO_NOT_AVAILABLE : String = "bio not available".localized
 }

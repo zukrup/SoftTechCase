@@ -25,10 +25,10 @@ class Owner: Decodable {
     dynamic var public_repos : Int = 0
     dynamic var followers : Int = 0
     dynamic var following : Int = 0
-    
+    dynamic var bio : String? = nil
     
     enum CodingKeys: String, CodingKey {
-        case id = "id", login = "login", avatar_url = "avatar_url", gravatar_id = "gravatar_id", html_url = "html_url", name = "name", company = "company", blog = "blog", location = "location", email = "email", twitter_username = "twitter_username", public_repos = "public_repos", followers = "followers",following = "following"
+        case id = "id", login = "login", avatar_url = "avatar_url", gravatar_id = "gravatar_id", html_url = "html_url", name = "name", company = "company", blog = "blog", location = "location", email = "email", twitter_username = "twitter_username", public_repos = "public_repos", followers = "followers",following = "following", bio = "bio"
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -44,6 +44,10 @@ class Owner: Decodable {
         
         if let company_opt = try container.decodeIfPresent(String?.self, forKey: .company) {
             self.company = company_opt
+        }
+        
+        if let bio_opt = try container.decodeIfPresent(String?.self, forKey: .bio) {
+            self.bio = bio_opt
         }
         
         self.login = try container.decode(String?.self, forKey: .login)
