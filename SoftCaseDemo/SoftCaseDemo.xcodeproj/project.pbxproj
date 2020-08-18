@@ -76,6 +76,7 @@
 		107573C324EBAB0100E1A22C /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107573C124EBAB0100E1A22C /* ProfileViewCell.xib */; };
 		107A458B24EBD49900C2837B /* UserRepoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A458924EBD49900C2837B /* UserRepoViewCell.swift */; };
 		107A458C24EBD49900C2837B /* UserRepoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107A458A24EBD49900C2837B /* UserRepoViewCell.xib */; };
+		107A458F24EC206400C2837B /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A458E24EC206400C2837B /* RepoDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		107573C124EBAB0100E1A22C /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 		107A458924EBD49900C2837B /* UserRepoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoViewCell.swift; sourceTree = "<group>"; };
 		107A458A24EBD49900C2837B /* UserRepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRepoViewCell.xib; sourceTree = "<group>"; };
+		107A458E24EC206400C2837B /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +386,7 @@
 		1075738A24EAC00600E1A22C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				107A458D24EC204C00C2837B /* RepoDetail */,
 				107573BD24EBA71300E1A22C /* Profile */,
 				107573B824EAD79C00E1A22C /* RepoView */,
 				102C2F7224EA80C600058B10 /* Main.storyboard */,
@@ -461,6 +464,14 @@
 				107A458A24EBD49900C2837B /* UserRepoViewCell.xib */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		107A458D24EC204C00C2837B /* RepoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				107A458E24EC206400C2837B /* RepoDetailViewController.swift */,
+			);
+			path = RepoDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,6 +658,7 @@
 				102C308724EAA60800058B10 /* StringExtensions.swift in Sources */,
 				102C302224EA84E100058B10 /* TokenResponse.swift in Sources */,
 				102C309624EAA78D00058B10 /* SwiftyJSON.swift in Sources */,
+				107A458F24EC206400C2837B /* RepoDetailViewController.swift in Sources */,
 				102C308D24EAA60800058B10 /* UITableViewExtensions.swift in Sources */,
 				102C308F24EAA60800058B10 /* UIViewControllerExtensions.swift in Sources */,
 				107573C224EBAB0100E1A22C /* ProfileViewCell.swift in Sources */,

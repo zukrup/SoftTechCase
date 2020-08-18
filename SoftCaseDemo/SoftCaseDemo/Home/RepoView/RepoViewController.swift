@@ -235,9 +235,11 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard case let cell as RepoViewCell = tableView.cellForRow(at: indexPath) else {
+        guard case let _ as RepoViewCell = tableView.cellForRow(at: indexPath) else {
             return
         }
+        let data = self.mRepoList[indexPath.row] as Repo
+        gotoRepoDetailViewController(data: data)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -293,6 +295,11 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    fileprivate func gotoRepoDetailViewController(data: Repo) {
+        
+        self.performSegue(withIdentifier: "show_repo_detail_segue", sender: data)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "show_user_profile_segue":
@@ -300,6 +307,10 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
                 vc.selectedProfile = data
             }
             break
+        case "show_repo_detail_segue":
+            if let data = sender as? Repo, let vc = segue.destination as? RepoDetailViewController {
+                vc.selectedRepo = data
+            }
         default:
             break
         }

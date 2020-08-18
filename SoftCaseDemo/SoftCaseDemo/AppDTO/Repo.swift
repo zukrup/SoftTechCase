@@ -36,7 +36,7 @@ class Repo : Decodable {
         
         self.description = try container.decode(String?.self, forKey: .description)
         self.language = try container.decode(String?.self, forKey: .language)
-        self.html_url = try container.decode(String?.self, forKey: .description)
+        self.html_url = try container.decode(String?.self, forKey: .html_url)
         self.default_branch = try container.decode(String?.self, forKey: .default_branch)
         
         self.forks = try container.decode(Int.self, forKey: .forks)

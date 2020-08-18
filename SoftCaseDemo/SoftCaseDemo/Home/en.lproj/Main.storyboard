@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Comfortaa-Bold.ttf">
+            <string>Comfortaa-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--SoftTech Test Case-->
         <scene sceneID="tne-QT-ifu">
@@ -44,6 +49,7 @@
                         <outlet property="mTableView" destination="BkZ-Pb-cda" id="EGy-me-dRT"/>
                         <outlet property="progressAnchor" destination="nYQ-yZ-I55" id="fIl-73-EeE"/>
                         <segue destination="jOy-gd-Mq1" kind="show" identifier="show_user_profile_segue" id="YGa-bM-pTB"/>
+                        <segue destination="k2K-gE-MWF" kind="show" identifier="show_repo_detail_segue" id="jgE-P7-6h6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -117,7 +123,221 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jo-pK-YnG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316" y="575"/>
+            <point key="canvasLocation" x="2293" y="723"/>
+        </scene>
+        <!--Repo Detail View Controller-->
+        <scene sceneID="mEO-fP-lvq">
+            <objects>
+                <viewController id="k2K-gE-MWF" customClass="RepoDetailViewController" customModule="SoftCaseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rXd-TX-Tj3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZN-Tv-4Zx">
+                                <rect key="frame" x="18" y="106" width="378" height="774"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-plus-btn-circle" translatesAutoresizingMaskIntoConstraints="NO" id="JSs-NO-joc" userLabel="owner_avatar">
+                                        <rect key="frame" x="8" y="18" width="82" height="82"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="82" id="1hl-op-hrs"/>
+                                            <constraint firstAttribute="width" constant="82" id="6cZ-pp-Kb7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FS-kQ-eKA">
+                                        <rect key="frame" x="0.0" y="18" width="98" height="82"/>
+                                        <connections>
+                                            <action selector="avatarBtnClick:" destination="k2K-gE-MWF" eventType="touchUpInside" id="Z7V-k5-4hr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="html_url" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCq-9A-bhV" userLabel="repo_name" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="112" width="370" height="13.5"/>
+                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                        <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWi-ea-8DX">
+                                        <rect key="frame" x="0.0" y="142" width="378" height="2"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="8bd-9C-bsK"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mMg-uI-cLg">
+                                        <rect key="frame" x="8" y="158" width="198.5" height="136.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="XHu-mK-6sj">
+                                                <rect key="frame" x="0.0" y="0.0" width="97.5" height="136.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPb-fv-NdB" userLabel="owner" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="97.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Branch:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eue-uj-Ihv" userLabel="default_branch" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="20.5" width="97.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Update:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfB-Vc-6fG" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="41" width="97.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issues:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-9S-KAT" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="61.5" width="97.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emG-RG-Zrd" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="82" width="97.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forks:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOe-Ip-bPM" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="102.5" width="97.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watchers:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTJ-1i-BHP" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="123" width="97.5" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-Bn-ONw">
+                                                <rect key="frame" x="102.5" y="0.0" width="96" height="136.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="owner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSh-cl-ZPE" userLabel="owner" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="96" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="default_branch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-7w-uvr" userLabel="default_branch" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="20.5" width="96" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last_updated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kt-Mf-jT5" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="41" width="96" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="issues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVS-hM-Og5" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="61.5" width="96" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SG-sZ-toc" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="82" width="96" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="forks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xi3-o9-acK" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="102.5" width="96" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="watchers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWF-4f-EaZ" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="123" width="96" height="13.5"/>
+                                                        <fontDescription key="fontDescription" name="Comfortaa-Bold" family="Comfortaa" pointSize="12"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnE-uM-YWL" customClass="MyUILabeLField" customModule="SoftCaseDemo" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="303.5" width="362" height="17"/>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="description">
+                                                <attributes>
+                                                    <color key="NSColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="15" name="Comfortaa-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FnE-uM-YWL" secondAttribute="trailing" constant="8" id="22Y-Yw-8K9"/>
+                                    <constraint firstItem="4FS-kQ-eKA" firstAttribute="height" secondItem="JSs-NO-joc" secondAttribute="height" id="9sH-a1-5VN"/>
+                                    <constraint firstItem="TWi-ea-8DX" firstAttribute="centerX" secondItem="YZN-Tv-4Zx" secondAttribute="centerX" id="BbU-0q-QL4"/>
+                                    <constraint firstItem="mMg-uI-cLg" firstAttribute="top" secondItem="TWi-ea-8DX" secondAttribute="bottom" constant="14" id="IXO-rf-h1L"/>
+                                    <constraint firstItem="JSs-NO-joc" firstAttribute="leading" secondItem="YZN-Tv-4Zx" secondAttribute="leading" constant="8" id="JQL-Qe-2oO"/>
+                                    <constraint firstItem="4FS-kQ-eKA" firstAttribute="centerX" secondItem="JSs-NO-joc" secondAttribute="centerX" id="Ldq-RL-wa4"/>
+                                    <constraint firstItem="4FS-kQ-eKA" firstAttribute="width" secondItem="JSs-NO-joc" secondAttribute="width" multiplier="1.2" id="NQp-YB-eGg"/>
+                                    <constraint firstItem="TWi-ea-8DX" firstAttribute="width" secondItem="YZN-Tv-4Zx" secondAttribute="width" id="TCc-UP-dNb"/>
+                                    <constraint firstItem="4FS-kQ-eKA" firstAttribute="centerY" secondItem="JSs-NO-joc" secondAttribute="centerY" id="Tpi-gT-eUY"/>
+                                    <constraint firstItem="FnE-uM-YWL" firstAttribute="leading" secondItem="YZN-Tv-4Zx" secondAttribute="leading" constant="8" id="X1j-zD-Jqg"/>
+                                    <constraint firstItem="JSs-NO-joc" firstAttribute="top" secondItem="YZN-Tv-4Zx" secondAttribute="top" constant="18" id="anQ-2w-gDo"/>
+                                    <constraint firstItem="mMg-uI-cLg" firstAttribute="leading" secondItem="JSs-NO-joc" secondAttribute="leading" id="eFf-wK-Pgk"/>
+                                    <constraint firstItem="FnE-uM-YWL" firstAttribute="top" secondItem="mMg-uI-cLg" secondAttribute="bottom" constant="9" id="inG-je-zXB"/>
+                                    <constraint firstItem="TWi-ea-8DX" firstAttribute="top" secondItem="4FS-kQ-eKA" secondAttribute="bottom" constant="42" id="nyn-tM-i8U"/>
+                                    <constraint firstItem="aCq-9A-bhV" firstAttribute="top" secondItem="4FS-kQ-eKA" secondAttribute="bottom" constant="12" id="qfj-kF-UQt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RMy-PI-2ka" firstAttribute="trailing" secondItem="YZN-Tv-4Zx" secondAttribute="trailing" constant="18" id="3ux-ax-Vhm"/>
+                            <constraint firstItem="YZN-Tv-4Zx" firstAttribute="leading" secondItem="RMy-PI-2ka" secondAttribute="leading" constant="18" id="JDM-ui-Y3a"/>
+                            <constraint firstItem="YZN-Tv-4Zx" firstAttribute="top" secondItem="RMy-PI-2ka" secondAttribute="top" constant="18" id="U1a-Ze-I84"/>
+                            <constraint firstItem="YZN-Tv-4Zx" firstAttribute="bottom" secondItem="RMy-PI-2ka" secondAttribute="bottom" constant="18" id="fBl-vL-yRW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RMy-PI-2ka"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EAT-oc-Z48"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="JSs-NO-joc" id="Vot-ta-x0X"/>
+                        <outlet property="cardView" destination="YZN-Tv-4Zx" id="dI5-gq-JEZ"/>
+                        <outlet property="defaultBranchLabel" destination="gaa-7w-uvr" id="wFo-yR-IAz"/>
+                        <outlet property="descriptionLabel" destination="FnE-uM-YWL" id="w51-0h-bh2"/>
+                        <outlet property="forkLabel" destination="Xi3-o9-acK" id="CV2-DS-ws7"/>
+                        <outlet property="forksLabel" destination="Xi3-o9-acK" id="JRW-sg-OyM"/>
+                        <outlet property="issuesLabel" destination="XVS-hM-Og5" id="jKm-Ex-FpQ"/>
+                        <outlet property="languageLabel" destination="7SG-sZ-toc" id="a1a-1C-NHW"/>
+                        <outlet property="lastUpdatedLabel" destination="7Kt-Mf-jT5" id="hid-JJ-K3Q"/>
+                        <outlet property="ownerNameLabel" destination="cSh-cl-ZPE" id="fZD-Os-KrM"/>
+                        <outlet property="repoUrlLabel" destination="aCq-9A-bhV" id="JxG-MH-ve9"/>
+                        <outlet property="watchersLabel" destination="MWF-4f-EaZ" id="W0e-va-MLV"/>
+                        <segue destination="jOy-gd-Mq1" kind="show" identifier="show_user_profile_segue" id="3I6-AH-K3l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8B4-Qs-BBf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2478.2608695652175" y="-113.83928571428571"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3I6-AH-K3l"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="ic-plus-btn-circle" width="128" height="128"/>
+    </resources>
 </document>
