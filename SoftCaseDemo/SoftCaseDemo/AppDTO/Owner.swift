@@ -50,6 +50,10 @@ class Owner: Decodable {
             self.bio = bio_opt
         }
         
+        if let blog_opt = try container.decodeIfPresent(String?.self, forKey: .blog) {
+            self.blog = blog_opt
+        }
+        
         self.login = try container.decode(String?.self, forKey: .login)
 
         self.avatar_url = try container.decode(String?.self, forKey: .avatar_url)

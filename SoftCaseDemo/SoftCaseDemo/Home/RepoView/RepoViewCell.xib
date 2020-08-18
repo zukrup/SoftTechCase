@@ -34,6 +34,9 @@
                                     <constraint firstAttribute="width" constant="42" id="Ref-iA-NgV"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIz-eD-TEc" customClass="MyCellInfoButton" customModule="SoftCaseDemo" customModuleProvider="target">
+                                <rect key="frame" x="9.5" y="8.5" width="51" height="50"/>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9XQ-hg-2Nw">
                                 <rect key="frame" x="62" y="19" width="394" height="29"/>
                                 <subviews>
@@ -80,11 +83,15 @@
                             <constraint firstAttribute="trailing" secondItem="9XQ-hg-2Nw" secondAttribute="trailing" constant="4" id="3D4-wg-SF8"/>
                             <constraint firstItem="oP8-fP-wof" firstAttribute="centerY" secondItem="3Wr-LX-6fB" secondAttribute="centerY" id="9cP-3Q-KGp"/>
                             <constraint firstAttribute="trailing" secondItem="3Wr-LX-6fB" secondAttribute="trailing" constant="4" id="AG3-fP-enY"/>
+                            <constraint firstItem="JIz-eD-TEc" firstAttribute="centerX" secondItem="Zf7-kG-yb7" secondAttribute="centerX" id="Bav-oQ-6l0"/>
                             <constraint firstItem="3Wr-LX-6fB" firstAttribute="leading" secondItem="oP8-fP-wof" secondAttribute="trailing" constant="5" id="EUZ-GZ-v8i"/>
+                            <constraint firstItem="JIz-eD-TEc" firstAttribute="height" secondItem="Zf7-kG-yb7" secondAttribute="height" multiplier="1.2" id="Jn1-Q8-iSx"/>
+                            <constraint firstItem="JIz-eD-TEc" firstAttribute="centerY" secondItem="Zf7-kG-yb7" secondAttribute="centerY" id="RLa-Kn-yP8"/>
                             <constraint firstItem="Zf7-kG-yb7" firstAttribute="leading" secondItem="jhT-Mg-EUu" secondAttribute="leading" constant="14" id="SGj-hn-cXJ"/>
                             <constraint firstAttribute="bottom" secondItem="3Wr-LX-6fB" secondAttribute="bottom" constant="14" id="X7y-9Y-JxG"/>
                             <constraint firstItem="9XQ-hg-2Nw" firstAttribute="centerY" secondItem="jhT-Mg-EUu" secondAttribute="centerY" constant="-6" id="fW6-Ci-GrA"/>
                             <constraint firstItem="Zf7-kG-yb7" firstAttribute="centerY" secondItem="jhT-Mg-EUu" secondAttribute="centerY" constant="-6" id="swq-Kj-zXr"/>
+                            <constraint firstItem="JIz-eD-TEc" firstAttribute="width" secondItem="Zf7-kG-yb7" secondAttribute="width" multiplier="1.21429" id="xDX-Xd-TMW"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -98,6 +105,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatarImageView" destination="Zf7-kG-yb7" id="SuW-vk-AgW"/>
+                <outlet property="avatarImageViewBtn" destination="JIz-eD-TEc" id="f6A-yo-ME4"/>
                 <outlet property="cardView" destination="jhT-Mg-EUu" id="Zj1-Lw-HdZ"/>
                 <outlet property="lastUpdateStrLabel" destination="oP8-fP-wof" id="vwM-ds-jCx"/>
                 <outlet property="lastUpdatedLabel" destination="3Wr-LX-6fB" id="g8g-6J-WnZ"/>

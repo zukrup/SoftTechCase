@@ -43,7 +43,9 @@ class Repo : Decodable {
         self.watchers_count = try container.decode(Int.self, forKey: .watchers_count)
         self.open_issues = try container.decode(Int.self, forKey: .open_issues)
         
-        self.score = try container.decode(Double.self, forKey: .score)
+        if let scoreOpt = try container.decodeIfPresent(Double.self, forKey: .score) {
+            self.score = scoreOpt
+        }
         
         if let updatedAtStr = try container.decodeIfPresent(String.self, forKey: .updated_at) {
             self.updated_at = Scully.sharedInstance.isoStringToDate(updatedAtStr) ?? Date()

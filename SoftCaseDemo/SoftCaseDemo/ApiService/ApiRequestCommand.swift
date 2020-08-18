@@ -38,10 +38,10 @@ class ApiRequestCommand : NSObject {
             retval = "search/repositories"
             break
         case ApiRequestCommandType.get_user:
-            //retval = "api/user/me"
+            retval = "users/"
             break
         case ApiRequestCommandType.get_user_repos:
-            //retval = "api/user/update"
+            retval = "users/"
             break
         default:
             break

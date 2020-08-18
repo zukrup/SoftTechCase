@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Repo View Controller-->
+        <!--SoftTech Test Case-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="RepoViewController" customModule="SoftCaseDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,10 +39,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="031-rQ-j0t"/>
+                    <navigationItem key="navigationItem" title="SoftTech Test Case" id="031-rQ-j0t"/>
                     <connections>
                         <outlet property="mTableView" destination="BkZ-Pb-cda" id="EGy-me-dRT"/>
                         <outlet property="progressAnchor" destination="nYQ-yZ-I55" id="fIl-73-EeE"/>
+                        <segue destination="jOy-gd-Mq1" kind="show" identifier="show_user_profile_segue" id="YGa-bM-pTB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -57,6 +58,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="exT-lW-cDV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                            <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -66,6 +75,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O5A-1g-PHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="GL2-ku-JuX">
+            <objects>
+                <viewController id="jOy-gd-Mq1" customClass="ProfileViewController" customModule="SoftCaseDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="On1-R4-FVt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XoY-bZ-y7d">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9py-3g-iE7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="rwn-dW-IaL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XoY-bZ-y7d" firstAttribute="top" secondItem="Nm2-Nk-PfE" secondAttribute="top" id="ECw-xg-qH4"/>
+                            <constraint firstItem="9py-3g-iE7" firstAttribute="centerX" secondItem="Nm2-Nk-PfE" secondAttribute="centerX" id="GXm-V1-ard"/>
+                            <constraint firstAttribute="trailing" secondItem="9py-3g-iE7" secondAttribute="trailing" id="GwS-HQ-0Jn"/>
+                            <constraint firstItem="XoY-bZ-y7d" firstAttribute="leading" secondItem="Nm2-Nk-PfE" secondAttribute="leading" id="H6t-2n-bNM"/>
+                            <constraint firstItem="9py-3g-iE7" firstAttribute="top" secondItem="Nm2-Nk-PfE" secondAttribute="top" id="Jo1-MA-cYy"/>
+                            <constraint firstItem="XoY-bZ-y7d" firstAttribute="trailing" secondItem="Nm2-Nk-PfE" secondAttribute="trailing" id="ex6-4v-kWU"/>
+                            <constraint firstItem="Nm2-Nk-PfE" firstAttribute="bottom" secondItem="XoY-bZ-y7d" secondAttribute="bottom" id="lIB-Tg-MNh"/>
+                            <constraint firstItem="9py-3g-iE7" firstAttribute="leading" secondItem="On1-R4-FVt" secondAttribute="leading" id="rsN-5U-F4z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nm2-Nk-PfE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a6p-pz-Vv5"/>
+                    <connections>
+                        <outlet property="mTableView" destination="XoY-bZ-y7d" id="zUt-K0-Axf"/>
+                        <outlet property="progressAnchor" destination="9py-3g-iE7" id="E3S-V1-azU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Jo-pK-YnG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="575"/>
         </scene>
     </scenes>
 </document>

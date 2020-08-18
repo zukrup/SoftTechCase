@@ -21,6 +21,21 @@ class RepoResponse {
     var isSucceeded: Bool
 }
 
+class RepoResponseObject<Codable> : RepoResponse {
+    
+    override init() {
+       super.init()
+    }
+    
+    var item : Decodable? = nil
+    
+    init(object: Decodable) {
+        super.init()
+        self.item = object
+    }
+    
+}
+
 class RepoResponseObjectList<Codable> : RepoResponse {
     
     override init() {
@@ -33,6 +48,11 @@ class RepoResponseObjectList<Codable> : RepoResponse {
     init(json: JSON, objectList: [Decodable]) {
         super.init()
         self.total_count = json["total_count"].intValue
+        self.items = objectList
+    }
+    
+    init(objectList: [Decodable]) {
+        super.init()
         self.items = objectList
     }
     

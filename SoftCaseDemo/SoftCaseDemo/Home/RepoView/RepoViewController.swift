@@ -74,7 +74,7 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         return self.progressAnchor as ProgressParent
     }
     
-    let barParam: BarProgressorParameter = (.endless, BarProgressorSide.top, UIColor.sinRedLight(0.85), 3)
+    let barParam: BarProgressorParameter = (.endless, BarProgressorSide.top, UIColor.sinRedLight(0.65), 3)
     
     @objc private func refreshAllItemData(_ sender: Any) {
         
@@ -212,8 +212,8 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
             cell.layer.backgroundColor = UIColor.clear.cgColor
             cell.repo = data
             
-            cell.avatarImageView?.tag = data.id
-            //cell.avatarBtn?.addTarget(self, action: #selector(OrderListViewController.gotoOrderChatViewController(_:)), for: .touchUpInside)
+            cell.avatarImageViewBtn?.indexPath = indexPath
+            cell.avatarImageViewBtn?.addTarget(self, action: #selector(self.gotoProfileViewController(_:)), for: .touchUpInside)
             
             return cell
         default:
@@ -258,10 +258,10 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     var timer : Timer?
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         if let _ = self.timer {
             timer!.invalidate()
         }
-        
         timer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(self.reload), userInfo: searchText, repeats: false)
 
     }
@@ -271,7 +271,6 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         timer!.invalidate()
         guard let searchText = self.searchController.searchBar.text else {
             return
-            
         }
         if let query = self.searchController.searchBar.text {
             if !query.isEmpty {
@@ -285,6 +284,26 @@ class RepoViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    @objc fileprivate func gotoProfileViewController(_ sender: MyCellInfoButton) {
+        
+        if let indexPath = sender.indexPath, let data = self.mRepoList.get(indexPath.row) {
+            if let name = data.owner?.login {
+                self.performSegue(withIdentifier: "show_user_profile_segue", sender: name)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "show_user_profile_segue":
+            if let data = sender as? String, let vc = segue.destination as? ProfileViewController {
+                vc.selectedProfile = data
+            }
+            break
+        default:
+            break
+        }
+    }
     
 }
 

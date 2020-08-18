@@ -29,8 +29,10 @@ class ApiRequestService : ApiOperation {
                 get_repos()
                 break
             case ApiRequestCommandType.get_user:
+                get_user()
                 break
             case ApiRequestCommandType.get_user_repos:
+                get_user_repos()
                 break
             default:
                 break
@@ -45,6 +47,89 @@ class ApiRequestService : ApiOperation {
             retval += methodName
         }
         return retval
+    }
+    
+    func getServiceEndPointAddressString() -> String {
+        
+        var retval : String = self.URL_ACTIVE
+        if let methodName = self.apiRequestCommand?.getMethodName() {
+            retval += methodName
+        }
+        return retval
+    }
+    
+    fileprivate func get_user() {
+        
+        var endPoint = getServiceEndPointAddressString()
+        if let qobj = self.apiRequestCommand?.queryObject as? BaseRequest {
+            endPoint += qobj.QueryString
+        }
+        
+        
+        AF.request((endPoint as URLConvertible), method: .get, parameters: nil)
+            .validate().responseJSON { (data) in
+                
+                
+                if let _ = data.error {
+                    self.apiRequestCommand?.apiResponseState = ApiRequestResponseState.error
+                    self.handle_api_response(data: data)
+                    
+                }
+                
+                if let datavalue = data.value {
+                    self.apiRequestCommand?.apiResponseState = ApiRequestResponseState.success
+                    let jsonResult = JSON(datavalue)
+                    do {
+                        let returnObj = RepoResponseObject<Owner>(object: try JSONDecoder().decode(Owner.self, from: jsonResult.rawData()))
+                        returnObj.isSucceeded = true
+                        self.apiRequestCommand?.returnObject = returnObj
+                    }
+                    catch {
+                        print(error)
+                        self.handle_api_response(data: data)
+                    }
+                }
+                 
+                self.complete_operation()
+        }
+        
+    }
+    
+    fileprivate func get_user_repos() {
+        
+        var endPoint = getServiceEndPointAddressString()
+        if let qobj = self.apiRequestCommand?.queryObject as? BaseRequest {
+            endPoint += qobj.QueryString + "/repos"
+        }
+        
+        AF.request((endPoint as URLConvertible), method: .get, parameters: nil)
+            .validate().responseJSON { (data) in
+                
+                
+                if let _ = data.error {
+                    self.apiRequestCommand?.apiResponseState = ApiRequestResponseState.error
+                    self.handle_api_response(data: data)
+                    
+                }
+                
+                if let datavalue = data.value {
+                    self.apiRequestCommand?.apiResponseState = ApiRequestResponseState.success
+                    let jsonResult = JSON(datavalue)
+                    do {
+                        let returnObj = RepoResponseObjectList<Repo>(objectList: try JSONDecoder().decode([Repo].self, from: jsonResult.rawData()))
+                        returnObj.isSucceeded = true
+                        self.apiRequestCommand?.returnObject = returnObj
+                        
+                    }
+                    catch {
+                        print(error)
+                        self.handle_api_response(data: data)
+                    }
+                }
+                 
+                self.complete_operation()
+        }
+        
     }
     
     fileprivate func get_repos() {

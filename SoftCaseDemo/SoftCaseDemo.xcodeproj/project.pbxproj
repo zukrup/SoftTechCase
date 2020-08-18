@@ -74,6 +74,8 @@
 		107573BF24EBA75200E1A22C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107573BE24EBA75200E1A22C /* ProfileViewController.swift */; };
 		107573C224EBAB0100E1A22C /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107573C024EBAB0100E1A22C /* ProfileViewCell.swift */; };
 		107573C324EBAB0100E1A22C /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107573C124EBAB0100E1A22C /* ProfileViewCell.xib */; };
+		107A458B24EBD49900C2837B /* UserRepoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107A458924EBD49900C2837B /* UserRepoViewCell.swift */; };
+		107A458C24EBD49900C2837B /* UserRepoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 107A458A24EBD49900C2837B /* UserRepoViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,8 @@
 		107573BE24EBA75200E1A22C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		107573C024EBAB0100E1A22C /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		107573C124EBAB0100E1A22C /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
+		107A458924EBD49900C2837B /* UserRepoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepoViewCell.swift; sourceTree = "<group>"; };
+		107A458A24EBD49900C2837B /* UserRepoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserRepoViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +457,8 @@
 				107573BE24EBA75200E1A22C /* ProfileViewController.swift */,
 				107573C024EBAB0100E1A22C /* ProfileViewCell.swift */,
 				107573C124EBAB0100E1A22C /* ProfileViewCell.xib */,
+				107A458924EBD49900C2837B /* UserRepoViewCell.swift */,
+				107A458A24EBD49900C2837B /* UserRepoViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				102C2FF224EA84E100058B10 /* Localizable.strings in Resources */,
 				107573B724EAD79200E1A22C /* RepoViewCell.xib in Resources */,
 				107573BC24EB277E00E1A22C /* PagerViewCell.xib in Resources */,
+				107A458C24EBD49900C2837B /* UserRepoViewCell.xib in Resources */,
 				107573C324EBAB0100E1A22C /* ProfileViewCell.xib in Resources */,
 				102C302324EA84E100058B10 /* Comfortaa-Bold.ttf in Resources */,
 				102C2F7624EA80C800058B10 /* Assets.xcassets in Resources */,
@@ -608,6 +615,7 @@
 				102C2F7124EA80C600058B10 /* RepoViewController.swift in Sources */,
 				107573AB24EAD23100E1A22C /* RingProgressorView.swift in Sources */,
 				107573B124EAD23100E1A22C /* ProgressorCollection.swift in Sources */,
+				107A458B24EBD49900C2837B /* UserRepoViewCell.swift in Sources */,
 				107573B024EAD23100E1A22C /* ColorProgressorView.swift in Sources */,
 				107573A624EAD23100E1A22C /* Progressor.swift in Sources */,
 				102C308824EAA60800058B10 /* TTGSnackbarExtensions.swift in Sources */,

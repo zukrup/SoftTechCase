@@ -34,7 +34,7 @@ public enum ApiRequestResponseState {
     case timeout
 }
 
-public enum enRepoCellType {
+public enum enRepoCellType : Int {
     case repo_object_cell
     case pager_cell
 }
