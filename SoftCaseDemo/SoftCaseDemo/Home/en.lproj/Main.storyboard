@@ -134,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZN-Tv-4Zx">
-                                <rect key="frame" x="18" y="106" width="378" height="774"/>
+                                <rect key="frame" x="18" y="106" width="378" height="744"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-plus-btn-circle" translatesAutoresizingMaskIntoConstraints="NO" id="JSs-NO-joc" userLabel="owner_avatar">
                                         <rect key="frame" x="8" y="18" width="82" height="82"/>
@@ -308,7 +308,7 @@
                             <constraint firstItem="RMy-PI-2ka" firstAttribute="trailing" secondItem="YZN-Tv-4Zx" secondAttribute="trailing" constant="18" id="3ux-ax-Vhm"/>
                             <constraint firstItem="YZN-Tv-4Zx" firstAttribute="leading" secondItem="RMy-PI-2ka" secondAttribute="leading" constant="18" id="JDM-ui-Y3a"/>
                             <constraint firstItem="YZN-Tv-4Zx" firstAttribute="top" secondItem="RMy-PI-2ka" secondAttribute="top" constant="18" id="U1a-Ze-I84"/>
-                            <constraint firstItem="YZN-Tv-4Zx" firstAttribute="bottom" secondItem="RMy-PI-2ka" secondAttribute="bottom" constant="18" id="fBl-vL-yRW"/>
+                            <constraint firstItem="YZN-Tv-4Zx" firstAttribute="bottom" secondItem="RMy-PI-2ka" secondAttribute="bottom" constant="-12" id="fBl-vL-yRW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RMy-PI-2ka"/>
                     </view>

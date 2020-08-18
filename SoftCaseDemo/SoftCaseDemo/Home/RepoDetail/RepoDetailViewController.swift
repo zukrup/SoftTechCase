@@ -45,8 +45,21 @@ class RepoDetailViewController : BaseViewController {
     }
 
     func assignLayout() {
-        self.cardView.layer.cornerRadius = 4.0
-        self.cardView.layer.borderWidth = 0.5
+        self.ownerNameLabel.text = ""
+
+        self.forkLabel.text = ""
+        self.descriptionLabel.text = ""
+        self.languageLabel.text = ""
+        self.defaultBranchLabel.text = ""
+
+        self.lastUpdatedLabel.text = ""
+        
+        self.issuesLabel.text = ""
+        self.watchersLabel.text = ""
+        self.repoUrlLabel.text = ""
+        
+        self.cardView.layer.cornerRadius = 6.0
+        self.cardView.layer.borderWidth = 0.86
         self.cardView.layer.borderColor = UIColor.whiteTintColor(1.0).cgColor
          self.cardView.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 6.0, borderColor: UIColor.GrayTintColor(220, alpha: 0.7), borderWidth: 0.65)
     }
@@ -60,7 +73,7 @@ class RepoDetailViewController : BaseViewController {
             self.ownerNameLabel.text = r.owner?.login
 
             self.forkLabel.text = String(r.forks) + " " + "forks"
-            self.descriptionLabel.text = "¨" + (r.description ?? MyStrings.sharedInstance.NOT_AVAILABLE) + "¨"
+            self.descriptionLabel.text = "\"" + (r.description ?? MyStrings.sharedInstance.NOT_AVAILABLE) + "\""
             self.languageLabel.text = r.language
             self.defaultBranchLabel.text = r.default_branch
 
